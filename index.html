@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="styles.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhysicsStuff</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <button type="button" onclick="startSimulation()">Start Simulation</button>
+    <br />
+
+    <!--Radio buttons for Elastic or Inelastic collision-->
+    <input type="radio" id="elasticButton" name="momentum" checked="checked" />
+    <label for="html">Elastic</label><br />
+    <input type="radio" name="momentum" id="inelasticButton" />
+    <label for="html">Inelastic</label><br />
+
+    <!--Input Boxes for Mass & Velcoity-->
+    <input type="number" placeholder="Blue Mass" id="blueMassInput" name="blueMassInput"><br>
+    <input type="number" placeholder="Blue Inital Velocity" id="blueVelocityInput" name="blueVelocityInput"><br><br>
+    <input type="number" placeholder="Red Mass" id="redMassInput" name="redMassInput"><br>
+    <input type="number" placeholder="Red Inital Velocity" id="redVelocityInput" name="redVelocityInput"><br><br>
+
+
+    <table>
+      <tr>
+        <th>Blue Velocity</th>
+        <th>Red Velocity</th>
+      </tr>
+      <tr>
+        <td id="blueVelocityDisplay"></td>
+        <td id="redVelocityDisplay"></td>
+      </tr>
+    </table>
+
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
