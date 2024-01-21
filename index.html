@@ -10,7 +10,8 @@
   <body>
     <canvas id="canvas"></canvas>
     <button type="button" onclick="startSimulation()">Start Simulation</button>
-    <br />
+    <button type="button" onclick="resetSimulation()">Reset Simulation</button>
+    <br/>
 
     <!--Radio buttons for Elastic or Inelastic collision-->
     <input type="radio" id="elasticButton" name="momentum" checked="checked" />
@@ -23,21 +24,6 @@
     <input type="number" placeholder="Blue Inital Velocity" id="blueVelocityInput" name="blueVelocityInput"><br><br>
     <input type="number" placeholder="Red Mass" id="redMassInput" name="redMassInput"><br>
     <input type="number" placeholder="Red Inital Velocity" id="redVelocityInput" name="redVelocityInput"><br><br>
-
-
-    <table>
-      <tr>
-        <th>Blue Velocity</th>
-        <th>Red Velocity</th>
-      </tr>
-      <tr>
-        <td id="blueVelocityDisplay"></td>
-        <td id="redVelocityDisplay"></td>
-      </tr>
-    </table>
-
-
-
 
     <script src="script.js"></script>
   </body>

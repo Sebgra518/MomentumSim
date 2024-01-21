@@ -4,8 +4,6 @@ var ctx = canvas.getContext("2d");
 var elastic = document.getElementById("elasticButton");
 var inelastic = document.getElementById("inelasticButton");
 
-var block1VelocityDisplay = document.getElementById("blueVelocityDisplay").innerHTML;
-var block2VelocityDisplay = document.getElementById("redVelocityDisplay").innerHTML;
 
 var blueMassInput = document.getElementById("blueMassInput");
 var blueVelocityInput = document.getElementById("blueVelocityInput");
@@ -81,9 +79,13 @@ function startSimulation() {
     block2Mass = 1;
     block1Velocity = 1;
     block2Velocity = 0;
+    blueMassInput.value = 1;
+    blueVelocityInput.value = 1;
+    redMassInput.value = 1;
+    redVelocityInput.value = 0;
   }
 
-  setInterval(function () {
+update1 = setInterval(function () {
     if (checkCollision() && !elastic) {
       finalVelocity =
         (block1Mass * block1Velocity + block2Mass * block2Velocity) /
@@ -109,6 +111,17 @@ function startSimulation() {
     block2VelocityDisplay = block2Velocity;
   }, 50);
 }
+
+function resetSimulation(){
+
+  block1PosX = 10;
+  block2PosX = 150;
+
+  clearInterval(update1);
+
+  update()
+}
+
 
 drawBlock1();
 drawBlock2();
